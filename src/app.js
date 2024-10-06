@@ -15,7 +15,7 @@ app.use(express.static('public'));
 await redisServiceManager.connect();
 await initSocket(server);
 
-server.listen(PORT, async () => {
+server.listen(PORT, '0.0.0.0', async () => {
   console.log(`Server is running on port : ${PORT}`);
 
   try {
