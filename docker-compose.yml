@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: node_websocket_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    restart: always
+    networks:
+      - websocket_network
+
+  redis:
+    image: "redis:latest"
+    container_name: "dino_redis"
+    volumes:
+      - ./redis:/data  
+    restart: always
+    networks:
+      - websocket_network
+
+networks:
+  websocket_network:
+    driver: bridge

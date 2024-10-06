@@ -1,3 +1,6 @@
+#redis
+redis/
+
 # Logs
 logs
 *.log
