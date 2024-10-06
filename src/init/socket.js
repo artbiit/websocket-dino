@@ -4,7 +4,7 @@ import registerHandler from '../handlers/register.handler.js';
 const initSocket = async (server) => {
   const io = new SocketIO(server, {
     cors: {
-      origin: 'http://localhost:3000',
+      origin: 'http://sparta.positivenerd.duckdns.org',
       methods: ['GET', 'POST'],
       allowedHeaders: ['my-custom-header'],
       credentials: true,
