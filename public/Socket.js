@@ -10,7 +10,7 @@ let socket = null;
 export const connect = () => {
   const states = GameManager.getStates();
   GameManager.setState(states.connection);
-  socket = io('http://localhost:3000', {
+  socket = io('http://positivenerd.duckdns.org:15010/', {
     query: {
       clientVersion: CLIENT_VERSION,
       uuid: getLocalStorage('UUID'),
